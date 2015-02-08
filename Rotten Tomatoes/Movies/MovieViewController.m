@@ -60,14 +60,14 @@
     MovieViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary *movie = self.movies[indexPath.row];
-    cell.titleLabel.text = movie[@"title"];
-    cell.descriptionLabel.text = movie[@"synopsis" ];
-    NSDictionary *posters = movie[@"posters"];
-    NSString *posterUrlString = posters[@"detailed"];
-    [cell.poster setImageWithURL:[NSURL URLWithString:posterUrlString]];
+    cell.movie = self.movies[indexPath.row];
+    [cell refresh];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
 }
 
 /*

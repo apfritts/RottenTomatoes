@@ -14,4 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
+@property NSDictionary *movie;
+
+- (void)refresh;
+
 @end

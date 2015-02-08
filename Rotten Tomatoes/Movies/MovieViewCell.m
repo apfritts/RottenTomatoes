@@ -7,12 +7,20 @@
 //
 
 #import "MovieViewCell.h"
-#import <AFNetworking.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation MovieViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+}
+
+- (void) refresh {
+    self.titleLabel.text = self.movie[@"title"];
+    self.descriptionLabel.text = self.movie[@"synopsis" ];
+    NSDictionary *posters = self.movie[@"posters"];
+    NSString *posterUrlString = posters[@"detailed"];
+    [self.poster setImageWithURL:[NSURL URLWithString:posterUrlString]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
