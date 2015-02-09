@@ -21,12 +21,11 @@
     NSDictionary *posters = self.movie[@"posters"];
     NSString *posterUrlString = posters[@"detailed"];
     [self.poster setImageWithURL:[NSURL URLWithString:posterUrlString]];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
+    //CGFloat width = [[UIScreen mainScreen] bounds].size.width;
+    //CGFloat left = 70;
+    //[self.titleLabel setBounds:CGRectMake(left, self.titleLabel.bounds.origin.y, width - left, self.titleLabel.bounds.size.height)];
+    //[self.descriptionLabel setBounds:CGRectMake(left, self.descriptionLabel.bounds.origin.y, width - left, self.descriptionLabel.bounds.size.height)];
 }
 
 @end

@@ -10,10 +10,6 @@
 
 @interface MovieDetailViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
-@property (weak, nonatomic) IBOutlet UILabel *rating;
-@property (weak, nonatomic) IBOutlet UILabel *synopsis;
+-(void)setMovie:(NSDictionary *)movie;
 
 @end

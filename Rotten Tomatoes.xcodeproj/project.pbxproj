@@ -10,6 +10,11 @@
 		0F270A9B6B68E5241F627613 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC00C987605C7B6DBF8F490F /* libPods.a */; };
 		8F0270801A868AA000E5CA3F /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02707E1A868AA000E5CA3F /* MovieDetailViewController.m */; };
 		8F0270811A868AA000E5CA3F /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F02707F1A868AA000E5CA3F /* MovieDetailViewController.xib */; };
+		8F0270861A880FD800E5CA3F /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0270851A880FD800E5CA3F /* ImageManager.m */; };
+		8F0270921A881F6D00E5CA3F /* MoviesNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0270911A881F6D00E5CA3F /* MoviesNavigationBar.m */; };
+		8F0270951A88279900E5CA3F /* NetworkErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0270941A88279900E5CA3F /* NetworkErrorView.m */; };
+		8F02709D1A882F5F00E5CA3F /* poster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F02709C1A882F5F00E5CA3F /* poster.png */; };
+		8F2F659A1A88340D0079DB2B /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F65991A88340D0079DB2B /* error.png */; };
 		8F9CED321A8116F600FF2207 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CED311A8116F600FF2207 /* main.m */; };
 		8F9CED351A8116F600FF2207 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CED341A8116F600FF2207 /* AppDelegate.m */; };
 		8F9CED3D1A8116F600FF2207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CED3C1A8116F600FF2207 /* Images.xcassets */; };
@@ -36,6 +41,13 @@
 		8F02707D1A868AA000E5CA3F /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		8F02707E1A868AA000E5CA3F /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		8F02707F1A868AA000E5CA3F /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		8F0270851A880FD800E5CA3F /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
+		8F0270901A881F6D00E5CA3F /* MoviesNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesNavigationBar.h; sourceTree = "<group>"; };
+		8F0270911A881F6D00E5CA3F /* MoviesNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesNavigationBar.m; sourceTree = "<group>"; };
+		8F0270931A88279900E5CA3F /* NetworkErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkErrorView.h; sourceTree = "<group>"; };
+		8F0270941A88279900E5CA3F /* NetworkErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkErrorView.m; sourceTree = "<group>"; };
+		8F02709C1A882F5F00E5CA3F /* poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster.png; sourceTree = "<group>"; };
+		8F2F65991A88340D0079DB2B /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		8F9CED2C1A8116F600FF2207 /* Rotten Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rotten Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9CED301A8116F600FF2207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9CED311A8116F600FF2207 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +96,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8F0270821A880F5700E5CA3F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F65991A88340D0079DB2B /* error.png */,
+				8F02709C1A882F5F00E5CA3F /* poster.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8F9CED231A8116F600FF2207 = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +128,16 @@
 		8F9CED2E1A8116F600FF2207 /* Rotten Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				8F0270821A880F5700E5CA3F /* Images */,
 				8FFE62421A81180900077070 /* Movies */,
 				8F9CED331A8116F600FF2207 /* AppDelegate.h */,
 				8F9CED341A8116F600FF2207 /* AppDelegate.m */,
 				8F9CED3C1A8116F600FF2207 /* Images.xcassets */,
 				8F9CED3E1A8116F600FF2207 /* LaunchScreen.xib */,
 				8F9CED2F1A8116F600FF2207 /* Supporting Files */,
+				8F0270851A880FD800E5CA3F /* ImageManager.m */,
+				8F0270931A88279900E5CA3F /* NetworkErrorView.h */,
+				8F0270941A88279900E5CA3F /* NetworkErrorView.m */,
 			);
 			path = "Rotten Tomatoes";
 			sourceTree = "<group>";
@@ -155,6 +180,8 @@
 				8F02707D1A868AA000E5CA3F /* MovieDetailViewController.h */,
 				8F02707E1A868AA000E5CA3F /* MovieDetailViewController.m */,
 				8F02707F1A868AA000E5CA3F /* MovieDetailViewController.xib */,
+				8F0270901A881F6D00E5CA3F /* MoviesNavigationBar.h */,
+				8F0270911A881F6D00E5CA3F /* MoviesNavigationBar.m */,
 			);
 			name = Movies;
 			sourceTree = "<group>";
@@ -250,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0270811A868AA000E5CA3F /* MovieDetailViewController.xib in Resources */,
+				8F2F659A1A88340D0079DB2B /* error.png in Resources */,
 				8FFE62471A81182E00077070 /* MovieViewController.xib in Resources */,
+				8F02709D1A882F5F00E5CA3F /* poster.png in Resources */,
 				8FFE624C1A811DDC00077070 /* MovieViewCell.xib in Resources */,
 				8F9CED401A8116F600FF2207 /* LaunchScreen.xib in Resources */,
 				8F9CED3D1A8116F600FF2207 /* Images.xcassets in Resources */,
@@ -305,8 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F9CED351A8116F600FF2207 /* AppDelegate.m in Sources */,
+				8F0270921A881F6D00E5CA3F /* MoviesNavigationBar.m in Sources */,
 				8FFE624B1A811DDC00077070 /* MovieViewCell.m in Sources */,
 				8F0270801A868AA000E5CA3F /* MovieDetailViewController.m in Sources */,
+				8F0270951A88279900E5CA3F /* NetworkErrorView.m in Sources */,
+				8F0270861A880FD800E5CA3F /* ImageManager.m in Sources */,
 				8FFE62461A81182E00077070 /* MovieViewController.m in Sources */,
 				8F9CED321A8116F600FF2207 /* main.m in Sources */,
 			);
