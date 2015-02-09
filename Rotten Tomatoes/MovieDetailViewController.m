@@ -92,7 +92,7 @@
     } else if (alpha < 0.5) {
         alpha = 0.5;
     }
-    NSLog([NSString stringWithFormat:@"%f", alpha ]);
+    //NSLog([NSString stringWithFormat:@"%f", alpha ]);
     [self.textContainer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:alpha]];
 }
 

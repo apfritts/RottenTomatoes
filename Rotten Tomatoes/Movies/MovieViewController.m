@@ -10,6 +10,7 @@
 #import "MovieViewCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "MovieDetailViewController.h"
+#import "MRProgress.h"
 #import "NetworkErrorView.h"
 
 @interface MovieViewController ()
@@ -38,10 +39,12 @@
 }
 
 -(void)refreshData {
+    [self.refreshControl endRefreshing];
+    [MRProgressOverlayView showOverlayAddedTo:self.view animated:YES];
     NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=3z78erjrcsh5dnbk76sbzgwv&limit=20&country=us";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        [self.refreshControl endRefreshing];
+        [MRProgressOverlayView dismissOverlayForView:self.view animated:YES];
         if (connectionError == nil) {
             id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             self.movies = object[@"movies"];
