@@ -16,6 +16,14 @@
 
 @implementation AppDelegate
 
+- (instancetype) init {
+    self = [super init];
+    self.urlCache = [[NSURLCache alloc] init];
+    [NSURLCache setSharedURLCache:self.urlCache];
+    self.urlRequest = [[NSURLRequest alloc] init];
+    return self;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Create the first view controller
     MovieViewController *movieViewController = [[MovieViewController alloc] initWithNibName:@"MovieViewController" bundle:nil];

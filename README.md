@@ -18,7 +18,7 @@ Time spent: `13`
 
 - [ no ] All images fade in.
 - [ no ] For the larger poster, load the low-res first and switch to high-res when complete.
-- [ no ] All images should be cached in memory and disk: AppDelegate has an instance of `NSURLCache` and `NSURLRequest` makes a request with `NSURLRequestReturnCacheDataElseLoad` cache policy. I tested it by turning off wifi and restarting the app.
+- [ done ] All images should be cached in memory and disk: AppDelegate has an instance of `NSURLCache` and `NSURLRequest` makes a request with `NSURLRequestReturnCacheDataElseLoad` cache policy. I tested it by turning off wifi and restarting the app.
 - [ no ] Customize the highlight and selection effect of the cell.
 - [ some ] Customize the navigation bar.
 - [ no ] Add a tab bar for Box Office and DVD.
